@@ -1,0 +1,832 @@
+/* =========================================================
+   JOBS MATCH TRAITS — ASSESSMENTS
+   PAGE-SPECIFIC STYLES
+   Shared Sidebar + Topbar = AdminDashboard.css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.assessments-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.assessments-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 26px;
+}
+
+.assessments-header h1 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 30px;
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+}
+
+.assessments-header p {
+  margin: 0;
+
+  color: #7d8799;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CREATE ASSESSMENT BUTTON
+========================================================= */
+
+.create-assessment-btn {
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6246e8,
+      #5338d8
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 7px 18px rgba(91, 75, 234, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.create-assessment-btn svg {
+  font-size: 12px;
+}
+
+.create-assessment-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 11px 25px rgba(91, 75, 234, 0.28);
+}
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(20, 30, 50, 0.035);
+}
+
+
+/* =========================================================
+   ASSESSMENT SEARCH
+========================================================= */
+
+.assessment-search {
+  flex: 1;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  background: #f9fafc;
+
+  border: 1px solid #e1e5ec;
+
+  border-radius: 8px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.assessment-search:focus-within {
+  border-color: #7165e8;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.assessment-search svg {
+  color: #8b94a5;
+
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+.assessment-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #273044;
+
+  font-size: 13px;
+}
+
+.assessment-search input::placeholder {
+  color: #9ca4b3;
+}
+
+
+/* =========================================================
+   FILTER SELECTS
+========================================================= */
+
+.filter-bar select {
+  height: 42px;
+
+  min-width: 155px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e1e5ec;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #596273;
+
+  outline: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filter-bar select:focus {
+  border-color: #7165e8;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.assessment-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.summary-card {
+  min-height: 125px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(20, 30, 50, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d9d5f2;
+
+  box-shadow:
+    0 10px 25px rgba(20, 30, 50, 0.07);
+}
+
+.summary-card span {
+  color: #737e91;
+
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.summary-card strong {
+  margin-top: 10px;
+
+  color: #172033;
+
+  font-size: 29px;
+  font-weight: 750;
+
+  line-height: 1;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================================
+   MAIN ASSESSMENTS PANEL
+========================================================= */
+
+.assessments-panel {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 3px 14px rgba(20, 30, 50, 0.04);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-top {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.panel-top h2 {
+  margin: 0 0 5px;
+
+  color: #172033;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: -0.25px;
+}
+
+.panel-top p {
+  margin: 0;
+
+  color: #8a94a5;
+
+  font-size: 13px;
+}
+
+.assessment-count {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: #f2efff;
+
+  color: #6557d9;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.assessment-table {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLE GRID
+========================================================= */
+
+.table-header,
+.assessment-table-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 2fr)
+    minmax(150px, 1.25fr)
+    minmax(110px, 0.8fr)
+    minmax(110px, 0.8fr)
+    minmax(90px, 0.7fr)
+    75px;
+
+  align-items: center;
+
+  column-gap: 18px;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-header {
+  min-height: 50px;
+
+  padding: 0 22px;
+
+  background: #fafbfc;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.table-header span {
+  color: #7d8798;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.55px;
+}
+
+
+/* =========================================================
+   TABLE ROW
+========================================================= */
+
+.assessment-table-row {
+  min-height: 86px;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #edf0f4;
+
+  transition:
+    background 0.2s ease;
+}
+
+.assessment-table-row:last-child {
+  border-bottom: none;
+}
+
+.assessment-table-row:hover {
+  background: #fbfaff;
+}
+
+
+/* =========================================================
+   ASSESSMENT NAME
+========================================================= */
+
+.assessment-name {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.assessment-logo {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #efefff,
+      #e6e1ff
+    );
+
+  color: #6259df;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.assessment-name > div:last-child {
+  min-width: 0;
+}
+
+.assessment-name strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #273044;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.assessment-name small {
+  display: block;
+
+  color: #929baa;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.role-cell {
+  color: #596273;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   QUESTIONS / CANDIDATES
+========================================================= */
+
+.questions-cell,
+.candidate-cell {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.questions-cell strong,
+.candidate-cell strong {
+  color: #273044;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.questions-cell small,
+.candidate-cell small {
+  color: #929baa;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.assessment-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.assessment-status.active {
+  background: #eaf8ef;
+
+  color: #269957;
+}
+
+.assessment-status.closed {
+  background: #f0f1f4;
+
+  color: #737c8b;
+}
+
+.assessment-status.draft {
+  background: #fff5e8;
+
+  color: #b57919;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.assessment-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.assessment-actions button {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e1e5ec;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #737d90;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.assessment-actions button:hover {
+  color: #5b4bea;
+
+  border-color: #cfc9ef;
+
+  background: #f8f6ff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-assessments {
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.no-assessments > svg {
+  margin-bottom: 14px;
+
+  color: #8b7ee8;
+
+  font-size: 30px;
+}
+
+.no-assessments h3 {
+  margin: 0 0 6px;
+
+  color: #273044;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.no-assessments p {
+  margin: 0;
+
+  color: #929baa;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .assessment-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .assessment-table {
+    overflow-x: auto;
+  }
+
+  .table-header,
+  .assessment-table-row {
+    min-width: 980px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .assessments-header {
+    align-items: flex-start;
+  }
+
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+
+  .assessment-search {
+    flex-basis: 100%;
+  }
+
+  .filter-bar select {
+    flex: 1;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .assessments-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .assessments-header h1 {
+    font-size: 27px;
+  }
+
+  .create-assessment-btn {
+    width: 100%;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .assessment-search {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .filter-bar select {
+    width: 100%;
+  }
+
+  .assessment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-top {
+    padding: 17px;
+  }
+
+  .table-header,
+  .assessment-table-row {
+    min-width: 980px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .assessments-header h1 {
+    font-size: 24px;
+  }
+
+  .assessments-header p {
+    font-size: 13px;
+  }
+
+  .summary-card {
+    min-height: 110px;
+
+    padding: 17px;
+  }
+
+  .summary-card strong {
+    font-size: 27px;
+  }
+
+  .panel-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
